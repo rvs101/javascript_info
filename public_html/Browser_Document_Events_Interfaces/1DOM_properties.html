@@ -1,5 +1,5 @@
 <!--Created on 06-abr-2018, 21:37:01-->
-<!-- Referencia :  -->
+<!-- Referencia : https://javascript.info/dom-attributes-and-properties  -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -30,9 +30,19 @@
       };
 
       alert(document.body.MyData.title);
-      
+
+      /**
+       * 
+       * @returns {undefined}
+       */
+      document.body.sayTagName = function () {
+        alert(this.tagName);
+      };
+
+      document.body.sayTagName();
+
     </script>
-    
+
 
     <footer>
       <section id="copyright">
