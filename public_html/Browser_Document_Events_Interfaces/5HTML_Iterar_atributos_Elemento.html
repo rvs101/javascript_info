@@ -1,0 +1,69 @@
+<!--Created on 06-abr-2018, 21:37:01-->
+<!-- Referencia : https://davidwalsh.name/javascript-attributes -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <!-- Metadatos basicos  -->
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="short icon" type="image/x-icon" href="https://goo.gl/cais23">
+    <!--Usar para CSS internos-->
+    <!--<style></style>-->
+    <!--<script src="link"></script>-->
+    <!--Usar para ejecutar codigo--> 
+  </head>
+  <body>
+
+    <p>Crear nuevos ATRIBUTOS dentro de los elementos HTML</p>
+    <p>Mediante JS podemos modificar</p>
+
+    <div id='elem' about='Elephant'></div>
+
+    <script>
+//      alert(elem.getAttribute('About')); // (1) 'Elephant', reading
+
+//      alert(elem);
+//      elem.setAttribute('Test', 123); // (2), writing
+
+//      alert(elem.outerHTML); // (3), see it's there
+
+//      alert(elem.attributes.length);
+
+
+      for (let attr of elem.attributes) { // (4) list all
+//      alert(`${attr.name} = ${attr.value}`);
+      }
+
+    </script>
+    <footer>
+      <section id="copyright">
+        <h3>&nbsp;</h3>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          <img id='img1' alt="Licencia de Creative Commons" style="border-width:0" 
+               src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+        </a>&nbsp;Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+      </section>
+    </footer>
+    <script>
+      
+      alert(img1.attributes.length);
+      
+      for (let attr of img1.attributes) { // (4) list all
+//      alert(`${attr.name} = ${attr.value}`);
+      }
+
+      Array.prototype.slice.call(document.getElementById("img1").attributes).forEach(function (item)
+      {
+//      alert(item.name + ': ' + item.value);
+      });
+    </script>
+  </body>
+</html>

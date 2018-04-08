@@ -1,0 +1,47 @@
+<!--Created on 08-abr-2018, 16:41:35-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <!-- Metadatos basicos  -->
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="short icon" type="image/x-icon" href="https://goo.gl/cais23">
+    <!--Usar para CSS internos-->
+    <style>
+      /*3º Creo el Selector '.order' y le añado el ATRIBUTO */
+      .order1[data-order-state='new']{
+        color: blue; /* creo PROPIEDAD CSS*/
+      }
+
+      /*3º Creo el Selector '.order' y le añado el ATRIBUTO */
+      .order1[data-order-state='pedding']{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!--1º Creo el selector CSS -->
+    <!--2º Creo el ATRIBUTO data-order-state='identificadorQueYoQuiera'-->
+    <div id='order' class='order1' data-order-state='new'>
+      A new Order
+    </div>
+
+    <script>
+      //4º Invoco al OBJETO 'order' mediante su 'id' y su ATRIBUTO data-order-state convertido en 'orderState'
+      //5º Lee la propiedad
+      console.log(order.dataset.orderState); // resultado -> new 
+      //6º Invoco al OBJETO 'order' mediante su 'id' y modifico las PROPIEDADES del ATRIBUTO 'data-order-state'
+      // mediante una asignación a su PROPIEDAD 'orderState'
+      //7º Modifica la propiedad
+      console.log(order.dataset.orderState = 'pedding'); // resultado => Cambia el ATRIBUTO de la ETIQUETA 'ELEMENTO' div
+    </script>
+
+  </body>
+</html>

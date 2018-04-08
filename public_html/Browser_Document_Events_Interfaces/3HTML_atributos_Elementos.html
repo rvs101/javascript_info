@@ -18,32 +18,31 @@
     <!--Usar para ejecutar codigo--> 
   </head>
   <body>
-
     <script>
-      /**
-       * MyData = PROPIEDAD
-       * @type type
-       */
-      document.body.MyData = {
-        name: 'Cesar', // clave : valor
-        title: 'Imperator' // clave : valor
-      };
 
-      alert(document.body.MyData.title);
+      alert(document.body.id);
 
-      /**
-       * 
-       * @returns {undefined}
-       */
-      document.body.sayTagName = function () {
-        alert(this.tagName);
-      };
-
-      document.body.sayTagName();
+      alert(document.body.something);
 
     </script>
 
+    <p>Atributo 'id' HMTL del elemento 'body' </p>
+    <pre>
+      alert(document.body.id);
+    </pre>
 
+    <span id='s1'></span>
+
+    <p>Atributo 'something' HMTL del elemento 'body' no representa nada <br>
+      porque no esta definido</p>
+    <pre>
+      alert(document.body.something);
+    </pre>
+
+
+    <span id='s2'></span>
+
+    <p></p>
     <footer>
       <section id="copyright">
         <h3>&nbsp;</h3>

@@ -1,0 +1,113 @@
+<!--Created on 08-abr-2018, 12:50:23-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <!-- Metadatos basicos  -->
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="short icon" type="image/x-icon" href="https://goo.gl/cais23">
+    <!--Usar para CSS internos-->
+    <!--<style></style>-->
+    <!--<script src="link"></script>-->
+    <!--Usar para ejecutar codigo--> 
+  </head>
+  <body id="b1">
+
+    <p id='sayTagName'></p>
+
+    <script>
+
+      document.body.myData = {
+        name: 'nombre asignado',
+        value: 'valor asignado'
+      };
+
+      console.log(document.body.myData.name);
+      console.log(document.body.myData.value);
+
+      document.body.sayTagName = function () {
+        console.log(this.tagName);
+      };
+
+      document.body.sayTagName();
+
+      document.body.MiBody = {
+        name: 'Parrafo 1',
+        value: 'Valor 1'
+      };
+
+      console.log(document.body.MiBody.nombre);
+      console.log(document.body.MiBody.valor);
+
+// PARA PODER CREAR OTRAS PROPIEDADES y METODOS ADICIONALES : NECESITAS DEFINIR 1 PRIMERA
+// CON EL ELEMENTO HTML desde DOCUMENT.ELEMENT
+      document.p = {
+        nombre: 'nombre Parrafo basico',
+        valor: 'valor Parrafo basico'
+      };
+
+      console.log(document.p.nombre);
+      console.log(document.p.valor);
+
+      document.p = function () {
+        console.log('valor: ' + this);
+      };
+
+      document.p();
+
+      document.p.OtraPropiedad = {
+        name: 'OtraPropiedad nombre Parrafo 1',
+        value: 'OtraPropiedad valor Parrafo 1'
+      };
+
+      console.log("document.p.OtraPropiedad.name : " + document.p.OtraPropiedad.name);
+      console.log("document.p.OtraPropiedad.value : " + document.p.OtraPropiedad.value);
+
+      document.p.OtraPropiedad = function () {
+        console.log('this.OtraPropiedad.name : ' + this.OtraPropiedad.name);
+        console.log('this.OtraPropiedad.value : ' + this.OtraPropiedad.value);
+      };
+
+      document.p.OtraPropiedad();
+
+      document.a = {
+        nombre: 'nombre A basico',
+        valor: 'valor A basico'
+      };
+
+      console.log(document.a.nombre);
+      console.log(document.a.valor);
+
+      document.a = function () {
+        console.log('valor: ' + this);
+      };
+
+      document.a();
+      
+      console.log('body con id : '+b1.attributes);
+      console.log(b1.attributes);
+      console.log('p con id : '+sayTagName.attributes);
+      console.log(sayTagName.attributes);
+      
+    </script>
+
+    <footer>
+      <section id="copyright">
+        <h3>&nbsp;</h3>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          <img alt="Licencia de Creative Commons" style="border-width:0" 
+               src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+        </a>&nbsp;Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+      </section>
+    </footer>
+  </body>
+</html>

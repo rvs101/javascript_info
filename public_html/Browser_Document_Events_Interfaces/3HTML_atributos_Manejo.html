@@ -1,0 +1,87 @@
+<!--Created on 08-abr-2018, 10:40:50-->
+<!-- Referencia :  https://javascript.info/dom-attributes-and-properties -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <!-- Metadatos basicos  -->
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="short icon" type="image/x-icon" href="https://goo.gl/cais23">
+    <!--Usar para CSS internos-->
+    <style>
+      .c1{
+        color: red;
+      }
+      .c2{
+        color: blue;
+      }
+      pre{
+        color: black;
+        border: 1px solid red;
+        margin: 10px 0 0 0;
+        padding: 10px;
+      }
+
+    </style>
+    <script id='s1' src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+  <body  id='b1' class='c1'>
+
+    <pre>
+      Para poder acceder al valor de un <b>ATRIBUTO</b> 
+      de una <b>ETIQUETA HTML</b> 
+      tenemos que referenciar el VALOR del <b>'id'</b>
+      para <b>Crear un OBJETO</b> y poder invocar todas
+      sus <b>PROPIEDADES y METODOS </b>
+      si se usa otro <b>ATRIBUTO</b> que no sea el <b>'id'</b>
+      <b>No FUNCIONA</b>
+
+      &lt;img id='i1' class='c1' alt="Licencia de Creative Commons" style="border-width:0" 
+          src="https://i.creativecommons.org/l/by/4.0/80x15.png" /&gt;
+
+                <b>Obj.METODO('ATRIBUTO HTML')</b>
+        console.log(i1.getAttribute('src')); -> https://i.creativecommons.org/l/by/4.0/80x15.png
+        console.log(i1.attributes.length); -> 5
+        console.log(i1.getAttribute('style')); -> border-width:0
+        console.log(i1.getAttribute('alt')); -> Licencia de Creative Commons
+        console.log(s1.getAttribute('src')); -> <b>"https://i.creativecommons.org/l/by/4.0/80x15.png"</b>
+
+      &lt;script id='s1' src="https://code.jquery.com/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
+                <b>Obj.PROPIEDAD</b>
+        console.log(s1.outerHTML);
+
+
+    </pre>
+
+    <footer id='f1' class='c1'>
+      <section id="copyright" class='c1'>
+        <h3 class='c1'>&nbsp;</h3>
+        <a class='c1' rel="license"
+           href="http://creativecommons.org/licenses/by/4.0/">
+          <img id='i1' class='c1' alt="Licencia de Creative Commons" style="border-width:0" 
+               src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+        </a>&nbsp;Este obra está bajo una 
+        <a class='c1' rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+      </section>
+      <script class='c2'>
+        console.log('Propiedad "attributes" : ' + i1.attributes);
+        console.log('atributo "id" de img : ' + i1.getAttribute('src'));
+        console.log('atributo "id" de img : ' + i1.attributes.length);
+        console.log('atributo "id" de img : ' + i1.getAttribute('style'));
+        console.log('atributo "id" de img : ' + i1.getAttribute('alt'));
+        console.log('atributo "id" de section : ' + copyright.attributes.length);
+        console.log('atributo src del elemento script : ' + s1.getAttribute('src'));
+        console.log('Propiedad "attributes" : ' + s1.attributes);
+        console.log('Propiedad id del elemento script outerHTML : ' + s1.outerHTML);
+      </script>
+
+    </footer>
+  </body>
+</html>

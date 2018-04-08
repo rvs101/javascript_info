@@ -1,0 +1,47 @@
+<!--Created on 08-abr-2018, 14:21:40-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <!-- Metadatos basicos  -->
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="short icon" type="image/x-icon" href="https://goo.gl/cais23">
+    <!--Usar para CSS internos-->
+    <!--<style></style>-->
+    <!--<script src="link"></script>-->
+    <!--Usar para ejecutar codigo--> 
+    <!--<script></script>-->
+  </head>
+  <body>
+    <input id="mi_input" type="checkbox" checked> checkbox
+
+    <script>
+      console.log(document.body.attributes); // the attribute value is: empty string
+      console.log(document.body.getAttribute('id')); // the attribute value is: empty string
+      console.log(mi_input.attributes);
+      console.log('Interface a la que pertenece : '+mi_input.attributes);
+      console.log(mi_input.type); // the property value is: true
+      console.log(mi_input.checked); // the property value is: true
+      console.log(mi_input.getAttribute('checked')); // the attribute value is: empty string
+    </script>
+
+    <footer>
+      <section id="copyright">
+        <h3>&nbsp;</h3>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          <img alt="Licencia de Creative Commons" style="border-width:0" 
+               src="https://i.creativecommons.org/l/by/4.0/80x15.png" />
+        </a>&nbsp;Este obra está bajo una 
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+          licencia de Creative Commons Reconocimiento 4.0 Internacional
+        </a>
+      </section>
+    </footer>
+  </body>
+</html>

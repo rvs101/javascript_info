@@ -1,0 +1,44 @@
+<!--Created on 08-abr-2018, 17:24:14-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <!-- Metadatos basicos  -->
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="short icon" type="image/x-icon" href="https://goo.gl/cais23">
+    <!--Usar para CSS internos-->
+    <!--<style></style>-->
+    <!--<script src="link"></script>-->
+    <!--Usar para ejecutar codigo--> 
+  </head>
+  <body>
+
+    <a name='list'>the list</a>
+    <ul>
+      <li><a href='http://google.com'>http://google.com</a></li>
+      <li><a href='/tutorial'>tutorial.html</a></li>
+      <li><a href='local/path'>local/path</a></li>
+      <li><a href='ftp://ftp.com/my.zip'>ftp://ftp.com/my.zip</a></li>
+      <li><a href='http://nodejs.com'>http://nodejs.com</a></li>
+      <li><a href='http://internal.com/test'>http://internal.com/test</a></li>
+      <li><a name='list'>the list</a></li>
+      <li><a href='http://otro_enlace' name='list'>Otro enlace que cumple las condiciones</a></li>
+    </ul>
+
+    <script>
+      // Expresion Regular
+      let selector = 'a[href*="://"]:not([href^="http://internal.com"])';
+      // Filtrado
+      let links = document.querySelectorAll(selector);
+      // Recorrerlo 
+      links.forEach(link => link.style.color = 'orange');
+    </script>
+
+  </body>
+</html>
