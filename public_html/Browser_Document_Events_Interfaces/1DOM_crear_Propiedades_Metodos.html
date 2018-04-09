@@ -18,11 +18,11 @@
     <!--Usar para ejecutar codigo--> 
   </head>
   <body id="b1">
-
     <p id='sayTagName'></p>
 
     <script>
 
+// Crear mi Propia PROPIEDAD para crear ATRIBUTOS PERSONALIZADOS
       document.body.myData = {
         name: 'nombre asignado',
         value: 'valor asignado'
@@ -30,7 +30,9 @@
 
       console.log(document.body.myData.name);
       console.log(document.body.myData.value);
+//<body id="b1" name='nombre asignado' value='valor asignado'>-->
 
+// Crear mis Propios METODOS
       document.body.sayTagName = function () {
         console.log(this.tagName);
       };
@@ -89,12 +91,12 @@
       };
 
       document.a();
-      
-      console.log('body con id : '+b1.attributes);
+
+      console.log('body con id : ' + b1.attributes);
       console.log(b1.attributes);
-      console.log('p con id : '+sayTagName.attributes);
+      console.log('p con id : ' + sayTagName.attributes);
       console.log(sayTagName.attributes);
-      
+
     </script>
 
     <footer>

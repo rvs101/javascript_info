@@ -1,0 +1,66 @@
+<!--Created on 08-abr-2018, 12:50:23-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <!-- Metadatos basicos  -->
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="short icon" type="image/x-icon" href="https://goo.gl/cais23">
+  </head>
+  <body id="b1">
+
+    <p id='p1'>Parrafo</p>
+
+    <div id='d1' about='Elephant'></div>
+
+    <script>
+
+      document.body.MyData = {
+      name: 'Cesar',
+      title: 'Imperator'
+      };
+      console.log(document.body.MyData);
+      
+      document.p = {
+      name: 'n1',
+      value: 'v1'
+      };
+      console.log(document.p);
+      
+      document.p.MisDatos = {
+      name: 'Cesar 2',
+      title: 'Imperator 2'
+      };
+      console.log(document.body.MyData);
+      console.log('----------------');
+      
+      console.log(p1.outerHTML);
+      console.log('----------------');
+      console.log(document.p.MisDatos);
+      console.log('----------------');
+      console.log(document.p.MisDatos.name);
+      console.log(document.p.MisDatos.title);
+      console.log('----------------');
+      
+      console.log('- Parrafo : solo los atributos HTML -');
+      for (let attr of p1.attributes) { //  list all
+      console.log(`${attr.name} = ${attr.value}` );
+      }
+
+      console.log('-Div : solo los atributos HTML -');
+      for (let attr of d1.attributes) { //  list all
+      console.log(`${attr.name} = ${attr.value}`);
+      }
+
+    </script>
+
+
+
+  </body>
+</html>

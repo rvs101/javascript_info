@@ -1,0 +1,60 @@
+<!--Created on 08-abr-2018, 12:50:23-->
+<!-- Referencia :  -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>titulo</title>
+    <meta charset="UTF-8">
+    <!-- Metadatos basicos  -->
+    <meta name="author" content="Raul Vela Salas">
+    <meta name="description" content="...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="short icon" type="image/x-icon" href="https://goo.gl/cais23">
+  </head>
+  <body>
+
+    <p id='parrafo1'>Parrafo</p>
+
+    <script>
+
+// creo PROPIEDADES
+      document.p = {
+      name: 'n1',
+      value: 'v1'
+      };
+      
+      
+// creo PROPIEDADES
+      document.p.MisDatos = {
+      name: 'Cesar 2',
+      title: 'Imperator 2'
+      };
+      
+      console.log(document.p.MisDatos); // todas las propiedades
+      
+      console.log(document.p.MisDatos.name); // selecciona una propiedades
+      console.log(document.p.MisDatos.title); // selecciona una propiedades
+      console.log(document.p.MisDatos.value); // selecciona una propiedades que "No existe"
+      
+      // - Creo un nuevo atributo para el ELEMENTO 'p' con id 'parrafo1' 
+      // - SE CREA UN NUEVO NODO 'Attr'
+      parrafo1.setAttribute('nombreatributo','valoratributo');
+      // Muestro todos los ATRIBUTOS para el ELEMENTO 'p' con id 'parrafo1'
+      console.log(parrafo1.attributes);
+      
+        //  Lista todos los ATRIBUTOS del ELEMENTO mediante su 'id'
+      for (let attr of parrafo1.attributes) { 
+      console.log(`${attr.name} = ${attr.value}`);
+      }
+      
+      // Etiqueta completa con todos los nuevos atributos
+      console.log(parrafo1.outerHTML);
+
+    </script>
+
+
+
+  </body>
+</html>
